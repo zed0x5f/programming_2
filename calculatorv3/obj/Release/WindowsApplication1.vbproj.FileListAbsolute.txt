@@ -1,0 +1,11 @@
+D:\calculatorv2\bin\Release\Calculator.exe.config
+D:\calculatorv2\bin\Release\Calculator.exe
+D:\calculatorv2\bin\Release\Calculator.pdb
+D:\calculatorv2\bin\Release\Calculator.xml
+D:\calculatorv2\obj\Release\Calculator.Form1.resources
+D:\calculatorv2\obj\Release\Calculator.Resources.resources
+D:\calculatorv2\obj\Release\WindowsApplication1.vbproj.GenerateResource.cache
+D:\calculatorv2\obj\Release\WindowsApplication1.vbproj.CoreCompileInputs.cache
+D:\calculatorv2\obj\Release\Calculator.exe
+D:\calculatorv2\obj\Release\Calculator.xml
+D:\calculatorv2\obj\Release\Calculator.pdb

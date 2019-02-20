@@ -1,0 +1,42 @@
+C:\VisualBasic\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+C:\VisualBasic\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+C:\VisualBasic\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+C:\VisualBasic\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+C:\VisualBasic\WindowsApplication1\obj\Debug\WindowsApplication1.Form1.resources
+C:\VisualBasic\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
+C:\VisualBasic\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
+C:\VisualBasic\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\VisualBasic\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+C:\VisualBasic\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+D:\calculator\bin\Debug\WindowsApplication1.exe.config
+D:\calculator\bin\Debug\WindowsApplication1.exe
+D:\calculator\bin\Debug\WindowsApplication1.pdb
+D:\calculator\bin\Debug\WindowsApplication1.xml
+D:\calculator\obj\Debug\WindowsApplication1.Form1.resources
+D:\calculator\obj\Debug\WindowsApplication1.Resources.resources
+D:\calculator\obj\Debug\WindowsApplication1.vbproj.GenerateResource.cache
+D:\calculator\obj\Debug\WindowsApplication1.exe
+D:\calculator\obj\Debug\WindowsApplication1.xml
+D:\calculator\obj\Debug\WindowsApplication1.pdb
+D:\calculator\obj\Debug\WindowsApplication1.vbprojAssemblyReference.cache
+D:\calculator\obj\Debug\WindowsApplication1.vbproj.CoreCompileInputs.cache
+D:\calculatorv2\bin\Debug\Calculator.exe.config
+D:\calculatorv2\bin\Debug\Calculator.exe
+D:\calculatorv2\bin\Debug\Calculator.pdb
+D:\calculatorv2\bin\Debug\Calculator.xml
+D:\calculatorv2\obj\Debug\Calculator.Form1.resources
+D:\calculatorv2\obj\Debug\Calculator.Resources.resources
+D:\calculatorv2\obj\Debug\WindowsApplication1.vbproj.GenerateResource.cache
+D:\calculatorv2\obj\Debug\WindowsApplication1.vbproj.CoreCompileInputs.cache
+D:\calculatorv2\obj\Debug\Calculator.exe
+D:\calculatorv2\obj\Debug\Calculator.xml
+D:\calculatorv2\obj\Debug\Calculator.pdb
+D:\calculatorv2\obj\Debug\WindowsApplication1.vbprojAssemblyReference.cache
+D:\calculatorv3\bin\Debug\Calculator.exe.config
+D:\calculatorv3\obj\Debug\Calculator.exe
+D:\calculatorv3\obj\Debug\Calculator.xml
+D:\calculatorv3\obj\Debug\Calculator.pdb
+D:\programming 2\calculatorv3\bin\Debug\Calculator.exe.config
+D:\programming 2\calculatorv3\obj\Debug\Calculator.exe
+D:\programming 2\calculatorv3\obj\Debug\Calculator.xml
+D:\programming 2\calculatorv3\obj\Debug\Calculator.pdb

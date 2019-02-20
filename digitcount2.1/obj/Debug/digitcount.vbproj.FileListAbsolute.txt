@@ -1,0 +1,22 @@
+D:\problem 2 1\digitcount\bin\Debug\digitcount.exe.config
+D:\problem 2 1\digitcount\bin\Debug\digitcount.exe
+D:\problem 2 1\digitcount\bin\Debug\digitcount.pdb
+D:\problem 2 1\digitcount\bin\Debug\digitcount.xml
+D:\problem 2 1\digitcount\obj\Debug\digitcount.Form1.resources
+D:\problem 2 1\digitcount\obj\Debug\digitcount.Resources.resources
+D:\problem 2 1\digitcount\obj\Debug\digitcount.vbproj.GenerateResource.Cache
+D:\problem 2 1\digitcount\obj\Debug\digitcount.exe
+D:\problem 2 1\digitcount\obj\Debug\digitcount.xml
+D:\problem 2 1\digitcount\obj\Debug\digitcount.pdb
+D:\programming 2\digitcount2.1\bin\Debug\digitcount.exe.config
+D:\programming 2\digitcount2.1\obj\Debug\digitcount.Form1.resources
+D:\programming 2\digitcount2.1\obj\Debug\digitcount.Resources.resources
+D:\programming 2\digitcount2.1\obj\Debug\digitcount.vbproj.GenerateResource.Cache
+D:\programming 2\digitcount2.1\obj\Debug\digitcount.exe
+D:\programming 2\digitcount2.1\obj\Debug\digitcount.xml
+D:\programming 2\digitcount2.1\obj\Debug\digitcount.pdb
+D:\programming 2\digitcount2.1\bin\Debug\digitcount.exe
+D:\programming 2\digitcount2.1\bin\Debug\digitcount.pdb
+D:\programming 2\digitcount2.1\bin\Debug\digitcount.xml
+D:\programming 2\digitcount2.1\obj\Debug\digitcount.vbprojAssemblyReference.cache
+D:\programming 2\digitcount2.1\obj\Debug\digitcount.vbproj.CoreCompileInputs.cache

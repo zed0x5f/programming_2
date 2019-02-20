@@ -1,0 +1,52 @@
+    Function Encrypt(ByVal msg As String) As String
+        Dim nmsg As String = ""
+        Console.WriteLine("before")
+        For I = 0 To msg.Length - 1
+            Dim char0 = msg.Chars(I)
+            Dim t As Integer = Asc(char0)
+            Console.Write(char0 & "=" & t & ":")
+            Select Case choice(I)
+                Case 0
+                    nmsg += Chr(255 - t)
+                Case 1
+                    nmsg += Chr((t \ 64) * 64 + (t - (t \ 4) * 4) * 16 + (t \ 4) - (t \ 64) * 16)
+                Case 2
+                    nmsg += Chr(t \ 16 + (t - (t \ 16) * 16) * 16)
+                Case 3
+                    nmsg += Chr((t - (t \ 4) * 4) * 64 + t \ 4)
+                Case 4
+                    nmsg += Chr(t)
+            End Select
+        Next
+        Console.WriteLine()
+        Return nmsg
+    End Function
+
+    Function MyCrypt(ByVal msg As String) As String
+        Dim nmsg As String = ""
+        Console.WriteLine("middle")
+        For i = 0 To msg.Length - 1
+            Dim t As Integer = Asc(msg.Substring(i, 1))
+            Select Case choice(i)
+                Case 0
+                    nmsg += Chr(-t + 255)'is good
+                Case 1
+                    nmsg += Chr(((t \ 64) * 48) + (t \ 4) + 16 * (t Mod 4))
+                Case 2
+                    nmsg += Chr((t Mod 16) * 16 + t \ 16)
+                Case 3
+                    nmsg += Chr((t Mod 4) * 64 + t \ 4)
+                Case 4
+                    nmsg += Chr(t) 'good
+            End Select
+            Dim char0 = nmsg.Substring(i, 1)
+            Console.Write(char0 & "=" & Asc(char0) & ":")
+        Next
+        Console.WriteLine()
+        Return nmsg
+    End Function
+
+    Function choice(i)
+        Return i Mod 5
+        Return 0
+    End Function
