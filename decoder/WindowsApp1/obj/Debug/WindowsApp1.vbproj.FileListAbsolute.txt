@@ -20,3 +20,5 @@ E:\programming 2\decoder\WindowsApp1\obj\Debug\WindowsApp1.vbproj.CoreCompileInp
 E:\programming 2\decoder\WindowsApp1\obj\Debug\WindowsApp1.exe
 E:\programming 2\decoder\WindowsApp1\obj\Debug\WindowsApp1.xml
 E:\programming 2\decoder\WindowsApp1\obj\Debug\WindowsApp1.pdb
+D:\programming 2\decoder\WindowsApp1\obj\Debug\WindowsApp1.vbprojAssemblyReference.cache
+D:\programming 2\decoder\WindowsApp1\obj\Debug\WindowsApp1.vbproj.CoreCompileInputs.cache

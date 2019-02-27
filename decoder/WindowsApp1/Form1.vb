@@ -58,11 +58,12 @@ Public Class Form1
                 Case 0
                     nmsg += Chr(-t + 255) 'is good
                 Case 1
+                    '1 2 4 8 16 32 64
+                    '0 1 2 3  4  5  6
                     Dim arr = New ArrayList()
-                    arr.Add(((t >> 6) * 48))
-                    arr.Add((t >> 2) << 2)
+                    arr.Add(((t >> 6) << 6))
                     arr.Add((t Mod 4) << 4)
-                    arr.Add(0 - ((t >> 5) << 4))
+                    arr.Add(0 - ((t >> 6) << 4))
                     Dim tmp = 0L
                     For Each a In arr
                         tmp += a
@@ -112,27 +113,10 @@ Public Class Form1
         Return nmsg
     End Function
 
-    Private Async Sub TextBox1_TextChanged(ByVal sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+    Private Sub TextBox1_TextChanged(ByVal sender As Object, e As EventArgs) Handles TextBox1.TextChanged
         Dim i = sender.text
-        Dim stick = Task.Run(Function() bob(i)).Result
-        En.Text = stick.en
-        out
-    End Sub
-
-    Dim breadbox = New List(Of Task)()
-
-    Private Async Function bob(ByVal i) As Task(Of bread)
-        Thread.Sleep(1000)
         Dim foo = Encrypt(i)
-        Return New bread(Encrypt(i), DeCrypt(foo))
-    End Function
-
-    Class bread
-        Dim en As String = ""
-        Dim out As String = ""
-        Public Sub New(a, b)
-            en = a
-            out = b
-        End Sub
-    End Class
+        En.Text = foo
+        out.Text = DeCrypt(foo)
+    End Sub
 End Class
