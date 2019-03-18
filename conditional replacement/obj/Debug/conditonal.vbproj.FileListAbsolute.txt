@@ -22,3 +22,15 @@ D:\programming 2\conditional replacement\obj\Debug\conditonal.Resources.resource
 D:\programming 2\conditional replacement\obj\Debug\conditonal.exe
 D:\programming 2\conditional replacement\obj\Debug\conditonal.xml
 D:\programming 2\conditional replacement\obj\Debug\conditonal.pdb
+C:\100\pba\programming_2\conditional replacement\bin\Debug\conditonal.exe.config
+C:\100\pba\programming_2\conditional replacement\bin\Debug\conditonal.exe
+C:\100\pba\programming_2\conditional replacement\bin\Debug\conditonal.pdb
+C:\100\pba\programming_2\conditional replacement\bin\Debug\conditonal.xml
+C:\100\pba\programming_2\conditional replacement\obj\Debug\conditonal.vbprojAssemblyReference.cache
+C:\100\pba\programming_2\conditional replacement\obj\Debug\conditonal.conditonal.resources
+C:\100\pba\programming_2\conditional replacement\obj\Debug\conditonal.Resources.resources
+C:\100\pba\programming_2\conditional replacement\obj\Debug\conditonal.vbproj.GenerateResource.cache
+C:\100\pba\programming_2\conditional replacement\obj\Debug\conditonal.vbproj.CoreCompileInputs.cache
+C:\100\pba\programming_2\conditional replacement\obj\Debug\conditonal.exe
+C:\100\pba\programming_2\conditional replacement\obj\Debug\conditonal.xml
+C:\100\pba\programming_2\conditional replacement\obj\Debug\conditonal.pdb

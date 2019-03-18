@@ -2,37 +2,46 @@
 
 Public Class conditonal
     Public Sub publix()
-        Dim prefix = New ArrayList()
-        Dim suffix = New ArrayList()
+        Dim fix = New ArrayList()
         Dim temp = tbArr(2).Text.split(",") 'restricted codes
-        'add restricted words with algo
         For Each rCode In temp
-            prefix.Add(rCode)
-            suffix.Add(rCode)
+            fix.Add(rCode)
         Next
-        temp = tbArr(1).Text.split(",")
-        For Each rWord In temp
-            Dim i = 0
-            While i < rWord.length - 1
-                If rWord.chars(i) = tbArr(3).Text Then
-                    prefix.Add(rWord.Substring(0, i))
-                    suffix.Add(rWord.Substring(i + 1, rWord.length - 1 - i)) 'you look at this and tell me theres a loving god
-                End If
-                i += 1
-            End While
-        Next
-        Dim raggaeMan = New Regex("(?<!" & spiner(prefix) & ")" & tbArr(3).Text & "(?!" & spiner(suffix) & ")")
+
+        Dim raggaeMan = New Regex(spiner(fix, True) & tbArr(3).Text & spiner(fix, False))
         Console.WriteLine(raggaeMan.ToString())
         tbArr(5).text = raggaeMan.Replace(tbArr(0).Text, tbArr(4).Text)
+        temp = tbArr(1).Text.split(",")
+
+        For Each wordCode In temp
+            If wordCode <> "" Then 'find words to ignore and replace them with the right word
+                tbArr(5).text = tbArr(5).text.replace(raggaeMan.Replace(wordCode, tbArr(4).Text), wordCode)
+            End If
+        Next
     End Sub
 
-    Public Function spiner(arr)
+    Public Function spiner(arr, negeativeLookBehind)
         Dim s = ""
         For Each x In arr
-            s &= x & "|"
+            If (Not (x = "")) Then
+                Console.WriteLine(x)
+                x = sanitize(x)
+                s &= x & "|"
+            End If
         Next
         s = s.TrimEnd("|")
-        Return s
+        If (s = "") Then
+            Return ""
+        Else
+            Return "(?" & If(negeativeLookBehind, "<", "") & "!" & s & ")"
+        End If
+
+    End Function
+
+    Public Function sanitize(foo)
+        Dim x = foo.replace("[-.\\+*?\\[^\\]$(){}=!<>|:\\\\]", "")
+        Console.WriteLine(x)
+        Return x
     End Function
 
     Private Sub updater()
