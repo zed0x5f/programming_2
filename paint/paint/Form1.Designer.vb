@@ -25,7 +25,7 @@ Partial Class Form1
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.PenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SizeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LineToolToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LineTool = New System.Windows.Forms.ToolStripMenuItem()
         Me.ErraserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolSizeColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SizeToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -37,7 +37,7 @@ Partial Class Form1
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PenToolStripMenuItem, Me.LineToolToolStripMenuItem, Me.ErraserToolStripMenuItem, Me.ToolSizeColorToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PenToolStripMenuItem, Me.LineTool, Me.ErraserToolStripMenuItem, Me.ToolSizeColorToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(800, 28)
@@ -57,11 +57,11 @@ Partial Class Form1
         Me.SizeToolStripMenuItem.Size = New System.Drawing.Size(123, 26)
         Me.SizeToolStripMenuItem.Text = "shape"
         '
-        'LineToolToolStripMenuItem
+        'LineTool
         '
-        Me.LineToolToolStripMenuItem.Name = "LineToolToolStripMenuItem"
-        Me.LineToolToolStripMenuItem.Size = New System.Drawing.Size(76, 24)
-        Me.LineToolToolStripMenuItem.Text = "line tool"
+        Me.LineTool.Name = "LineTool"
+        Me.LineTool.Size = New System.Drawing.Size(76, 24)
+        Me.LineTool.Text = "line tool"
         '
         'ErraserToolStripMenuItem
         '
@@ -94,10 +94,9 @@ Partial Class Form1
         Me.canvasContainer.Margin = New System.Windows.Forms.Padding(0)
         Me.canvasContainer.Name = "canvasContainer"
         Me.canvasContainer.Padding = New System.Windows.Forms.Padding(0)
-        Me.canvasContainer.Size = New System.Drawing.Size(200, 100)
+        Me.canvasContainer.Size = New System.Drawing.Size(505, 286)
         Me.canvasContainer.TabIndex = 3
         Me.canvasContainer.TabStop = False
-        Me.canvasContainer.Text = "GroupBox1"
         '
         'Form1
         '
@@ -118,7 +117,7 @@ Partial Class Form1
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents PenToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SizeToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents LineToolToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LineTool As ToolStripMenuItem
     Friend WithEvents ErraserToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolSizeColorToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SizeToolStripMenuItem1 As ToolStripMenuItem

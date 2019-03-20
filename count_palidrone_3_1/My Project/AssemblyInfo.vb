@@ -8,10 +8,10 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("palindrone")> 
+<Assembly: AssemblyTitle("Form1")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("Microsoft")> 
-<Assembly: AssemblyProduct("palindrone")> 
+<Assembly: AssemblyProduct("Form1")> 
 <Assembly: AssemblyCopyright("Copyright © Microsoft 2019")> 
 <Assembly: AssemblyTrademark("")> 
 
