@@ -26,18 +26,23 @@ Partial Class Form1
         Me.PenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SizeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LineTool = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ErraserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolSizeColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Circle = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SquareToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ErraserHead = New System.Windows.Forms.ToolStripMenuItem()
+        Me.toolStuff = New System.Windows.Forms.ToolStripMenuItem()
         Me.SizeToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ColourToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ColourPicker = New System.Windows.Forms.ToolStripMenuItem()
         Me.canvasContainer = New System.Windows.Forms.GroupBox()
+        Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
+        Me.SizeUpDown = New System.Windows.Forms.NumericUpDown()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.SizeUpDown, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PenToolStripMenuItem, Me.LineTool, Me.ErraserToolStripMenuItem, Me.ToolSizeColorToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PenToolStripMenuItem, Me.LineTool, Me.ErraserHead, Me.toolStuff})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(800, 28)
@@ -59,22 +64,35 @@ Partial Class Form1
         '
         'LineTool
         '
+        Me.LineTool.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Circle, Me.SquareToolStripMenuItem})
         Me.LineTool.Name = "LineTool"
         Me.LineTool.Size = New System.Drawing.Size(76, 24)
         Me.LineTool.Text = "line tool"
         '
-        'ErraserToolStripMenuItem
+        'Circle
         '
-        Me.ErraserToolStripMenuItem.Name = "ErraserToolStripMenuItem"
-        Me.ErraserToolStripMenuItem.Size = New System.Drawing.Size(61, 24)
-        Me.ErraserToolStripMenuItem.Text = "Eraser"
+        Me.Circle.Name = "Circle"
+        Me.Circle.Size = New System.Drawing.Size(128, 26)
+        Me.Circle.Text = "circle"
         '
-        'ToolSizeColorToolStripMenuItem
+        'SquareToolStripMenuItem
         '
-        Me.ToolSizeColorToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SizeToolStripMenuItem1, Me.ColourToolStripMenuItem})
-        Me.ToolSizeColorToolStripMenuItem.Name = "ToolSizeColorToolStripMenuItem"
-        Me.ToolSizeColorToolStripMenuItem.Size = New System.Drawing.Size(127, 24)
-        Me.ToolSizeColorToolStripMenuItem.Text = "tool size & colour"
+        Me.SquareToolStripMenuItem.Name = "SquareToolStripMenuItem"
+        Me.SquareToolStripMenuItem.Size = New System.Drawing.Size(128, 26)
+        Me.SquareToolStripMenuItem.Text = "square"
+        '
+        'ErraserHead
+        '
+        Me.ErraserHead.Name = "ErraserHead"
+        Me.ErraserHead.Size = New System.Drawing.Size(61, 24)
+        Me.ErraserHead.Text = "Eraser"
+        '
+        'toolStuff
+        '
+        Me.toolStuff.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SizeToolStripMenuItem1, Me.ColourPicker})
+        Me.toolStuff.Name = "toolStuff"
+        Me.toolStuff.Size = New System.Drawing.Size(127, 24)
+        Me.toolStuff.Text = "tool size & colour"
         '
         'SizeToolStripMenuItem1
         '
@@ -82,11 +100,11 @@ Partial Class Form1
         Me.SizeToolStripMenuItem1.Size = New System.Drawing.Size(126, 26)
         Me.SizeToolStripMenuItem1.Text = "size"
         '
-        'ColourToolStripMenuItem
+        'ColourPicker
         '
-        Me.ColourToolStripMenuItem.Name = "ColourToolStripMenuItem"
-        Me.ColourToolStripMenuItem.Size = New System.Drawing.Size(126, 26)
-        Me.ColourToolStripMenuItem.Text = "colour"
+        Me.ColourPicker.Name = "ColourPicker"
+        Me.ColourPicker.Size = New System.Drawing.Size(126, 26)
+        Me.ColourPicker.Text = "colour"
         '
         'canvasContainer
         '
@@ -98,17 +116,28 @@ Partial Class Form1
         Me.canvasContainer.TabIndex = 3
         Me.canvasContainer.TabStop = False
         '
+        'SizeUpDown
+        '
+        Me.SizeUpDown.Location = New System.Drawing.Point(372, 31)
+        Me.SizeUpDown.Name = "SizeUpDown"
+        Me.SizeUpDown.Size = New System.Drawing.Size(120, 22)
+        Me.SizeUpDown.TabIndex = 4
+        Me.SizeUpDown.Value = New Decimal(New Integer() {50, 0, 0, 0})
+        Me.SizeUpDown.Visible = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.SizeUpDown)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.canvasContainer)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.SizeUpDown, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -118,9 +147,13 @@ Partial Class Form1
     Friend WithEvents PenToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SizeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LineTool As ToolStripMenuItem
-    Friend WithEvents ErraserToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolSizeColorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ErraserHead As ToolStripMenuItem
+    Friend WithEvents toolStuff As ToolStripMenuItem
     Friend WithEvents SizeToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents ColourToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ColourPicker As ToolStripMenuItem
     Friend WithEvents canvasContainer As GroupBox
+    Friend WithEvents ColorDialog1 As ColorDialog
+    Friend WithEvents Circle As ToolStripMenuItem
+    Friend WithEvents SquareToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SizeUpDown As NumericUpDown
 End Class

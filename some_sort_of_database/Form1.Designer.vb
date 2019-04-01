@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,21 +20,24 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.tUsername = New System.Windows.Forms.TextBox()
+        Me.tPassword = New System.Windows.Forms.TextBox()
+        Me.tFName = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.tLName = New System.Windows.Forms.TextBox()
+        Me.btnInsert = New System.Windows.Forms.Button()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.tId = New System.Windows.Forms.TextBox()
+        Me.btnUpdate = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -47,26 +50,26 @@ Partial Class Form1
         Me.DataGridView1.Size = New System.Drawing.Size(1218, 218)
         Me.DataGridView1.TabIndex = 1
         '
-        'TextBox1
+        'tUsername
         '
-        Me.TextBox1.Location = New System.Drawing.Point(29, 316)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox1.TabIndex = 2
+        Me.tUsername.Location = New System.Drawing.Point(29, 316)
+        Me.tUsername.Name = "tUsername"
+        Me.tUsername.Size = New System.Drawing.Size(100, 22)
+        Me.tUsername.TabIndex = 2
         '
-        'TextBox2
+        'tPassword
         '
-        Me.TextBox2.Location = New System.Drawing.Point(159, 316)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox2.TabIndex = 3
+        Me.tPassword.Location = New System.Drawing.Point(159, 316)
+        Me.tPassword.Name = "tPassword"
+        Me.tPassword.Size = New System.Drawing.Size(100, 22)
+        Me.tPassword.TabIndex = 3
         '
-        'TextBox3
+        'tFName
         '
-        Me.TextBox3.Location = New System.Drawing.Point(276, 316)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox3.TabIndex = 4
+        Me.tFName.Location = New System.Drawing.Point(276, 316)
+        Me.tFName.Name = "tFName"
+        Me.tFName.Size = New System.Drawing.Size(100, 22)
+        Me.tFName.TabIndex = 4
         '
         'Label1
         '
@@ -104,25 +107,25 @@ Partial Class Form1
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "Last name"
         '
-        'TextBox4
+        'tLName
         '
-        Me.TextBox4.Location = New System.Drawing.Point(391, 316)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox4.TabIndex = 8
+        Me.tLName.Location = New System.Drawing.Point(391, 316)
+        Me.tLName.Name = "tLName"
+        Me.tLName.Size = New System.Drawing.Size(100, 22)
+        Me.tLName.TabIndex = 8
         '
-        'Button1
+        'btnInsert
         '
-        Me.Button1.Location = New System.Drawing.Point(543, 315)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 10
-        Me.Button1.Text = "insert"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnInsert.Location = New System.Drawing.Point(543, 315)
+        Me.btnInsert.Name = "btnInsert"
+        Me.btnInsert.Size = New System.Drawing.Size(75, 23)
+        Me.btnInsert.TabIndex = 10
+        Me.btnInsert.Text = "insert"
+        Me.btnInsert.UseVisualStyleBackColor = True
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(29, 389)
+        Me.TextBox5.Location = New System.Drawing.Point(244, 393)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(100, 22)
         Me.TextBox5.TabIndex = 11
@@ -130,38 +133,66 @@ Partial Class Form1
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(26, 356)
+        Me.Label5.Location = New System.Drawing.Point(241, 360)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(47, 17)
         Me.Label5.TabIndex = 12
         Me.Label5.Text = "delete"
         '
-        'Button2
+        'btnDelete
         '
-        Me.Button2.Location = New System.Drawing.Point(159, 389)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 13
-        Me.Button2.Text = "delete"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnDelete.Location = New System.Drawing.Point(374, 393)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(75, 23)
+        Me.btnDelete.TabIndex = 13
+        Me.btnDelete.Text = "delete"
+        Me.btnDelete.UseVisualStyleBackColor = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(26, 360)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(19, 17)
+        Me.Label6.TabIndex = 15
+        Me.Label6.Text = "id"
+        '
+        'tId
+        '
+        Me.tId.Location = New System.Drawing.Point(29, 391)
+        Me.tId.Name = "tId"
+        Me.tId.Size = New System.Drawing.Size(100, 22)
+        Me.tId.TabIndex = 14
+        '
+        'btnUpdate
+        '
+        Me.btnUpdate.Location = New System.Drawing.Point(150, 391)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
+        Me.btnUpdate.TabIndex = 24
+        Me.btnUpdate.Text = "update"
+        Me.btnUpdate.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1327, 450)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnUpdate)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.tId)
+        Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnInsert)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.tLName)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.tFName)
+        Me.Controls.Add(Me.tPassword)
+        Me.Controls.Add(Me.tUsername)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "Form1"
         Me.Text = "Form1"
@@ -172,16 +203,19 @@ Partial Class Form1
     End Sub
 
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents tUsername As TextBox
+    Friend WithEvents tPassword As TextBox
+    Friend WithEvents tFName As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents tLName As TextBox
+    Friend WithEvents btnInsert As Button
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnDelete As Button
+    Friend WithEvents Label6 As Label
+    Friend WithEvents tId As TextBox
+    Friend WithEvents btnUpdate As Button
 End Class

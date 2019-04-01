@@ -7,9 +7,14 @@ Public Class Form1
     Dim ds As New DataSet
 
     Dim customer = "DimCustomer"
+    Dim id = "custom_id"
+    Dim username = "username"
+    Dim password = "`password`"
+    Dim fName = "first_name"
+    Dim lName = "last_name"
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Connection.open()
+        Connection.Open()
         openUrEyes()
     End Sub
 
@@ -30,30 +35,28 @@ Public Class Form1
         End Try
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim clean = Function(elm) "'" & elm & "'"
-        Dim comma = Function(elm) clean(elm) & ","
-        Dim values = comma(TextBox1.Text)
-        values &= comma(TextBox2.Text)
-        values &= comma(TextBox3.Text) &
-           clean(TextBox4.Text)
+    Private Sub Inssert(sender As Object, e As EventArgs) Handles btnInsert.Click
+        Dim Sql = String.Format("INSERT INTO {0} ({1}, {2}, {3}, {4}) VALUES ('{5}', '{6}', '{7}', '{8}')",
+        customer, username, password, fName, lName, tUsername.Text, tPassword.Text, tFName.Text, tLName.Text)
+        EXECUTION(Sql)
+    End Sub
 
-        Dim sql = "INSERT INTO " & customer & " (username, `password`, first_name, last_name) VALUES (" & values & ")"
+    Private Sub MyUpdate(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        Dim i = 0
+        Dim stick = Function(key, value) If(value = "", "", key & " = '" & value & "',")
+        Dim values = stick(password, tPassword.Text)
+        values &= stick(username, tUsername.Text)
+        values &= stick(fName, tFName.Text)
+        values &= stick(lName, tLName.Text).replace(",", "")
+        Dim sql = String.Format("UPDATE {0} SET {1} where {2}={3}", customer, values, id, tId.Text)
 
         EXECUTION(sql)
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim id = "custom_id"
-        Dim sql = "DELETE FROM " & customer & " where " & id & "=" & TextBox5.Text & ";"
+    Private Sub Delete(sender As Object, e As EventArgs) Handles btnDelete.Click
+        Dim sql = String.Format("DELETE FROM {0} where {1}={2};", customer, id, TextBox5.Text)
         TextBox5.Text = ""
         EXECUTION(sql)
-        sql = "SELECT MAX(" & id & ") FROM " & customer
-        sql = "(" & sql & ")"
-        ' sql = "3"
-        'sql = "ALTER TABLE " & customer & " MODIFY " & id & " INT AUTO_INCREMENT=(" & sql & ");"
-        sql = "ALTER TABLE " & customer & " AUTO_INCREMENT = " & sql & ";"
-        ' EXECUTION(sql)
     End Sub
 
     Private Sub EXECUTION(sql As String)
@@ -70,6 +73,8 @@ Public Class Form1
             Console.WriteLine(ex)
         End Try
         Console.WriteLine("my eyes are crusty")
+        Console.WriteLine(String.Format("you asked for this life. dont complain lol{0}", &HFF))
+
         openUrEyes()
     End Sub
 End Class
