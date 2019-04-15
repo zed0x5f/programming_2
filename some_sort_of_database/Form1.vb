@@ -1,7 +1,7 @@
 ﻿Imports System.Data.OleDb
 
 Public Class Form1
-    Dim connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;" & "Data Source=C:\100\pba\programming_2\some_sort_of_database\thing.accdb;"
+    Dim connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;" & "Data Source=..\..\thing.accdb;"
     Dim Connection As New OleDbConnection(connectionString)
     Dim adapter = New OleDbDataAdapter()
     Dim ds As New DataSet

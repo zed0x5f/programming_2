@@ -35,6 +35,7 @@ Partial Class Form1
         Me.canvasContainer = New System.Windows.Forms.GroupBox()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         Me.SizeUpDown = New System.Windows.Forms.NumericUpDown()
+        Me.LineToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.SizeUpDown, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -64,7 +65,7 @@ Partial Class Form1
         '
         'LineTool
         '
-        Me.LineTool.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Circle, Me.SquareToolStripMenuItem})
+        Me.LineTool.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Circle, Me.SquareToolStripMenuItem, Me.LineToolStripMenuItem})
         Me.LineTool.Name = "LineTool"
         Me.LineTool.Size = New System.Drawing.Size(76, 24)
         Me.LineTool.Text = "line tool"
@@ -72,13 +73,13 @@ Partial Class Form1
         'Circle
         '
         Me.Circle.Name = "Circle"
-        Me.Circle.Size = New System.Drawing.Size(128, 26)
+        Me.Circle.Size = New System.Drawing.Size(216, 26)
         Me.Circle.Text = "circle"
         '
         'SquareToolStripMenuItem
         '
         Me.SquareToolStripMenuItem.Name = "SquareToolStripMenuItem"
-        Me.SquareToolStripMenuItem.Size = New System.Drawing.Size(128, 26)
+        Me.SquareToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
         Me.SquareToolStripMenuItem.Text = "square"
         '
         'ErraserHead
@@ -125,6 +126,12 @@ Partial Class Form1
         Me.SizeUpDown.Value = New Decimal(New Integer() {50, 0, 0, 0})
         Me.SizeUpDown.Visible = False
         '
+        'LineToolStripMenuItem
+        '
+        Me.LineToolStripMenuItem.Name = "LineToolStripMenuItem"
+        Me.LineToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.LineToolStripMenuItem.Text = "line"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -156,4 +163,5 @@ Partial Class Form1
     Friend WithEvents Circle As ToolStripMenuItem
     Friend WithEvents SquareToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SizeUpDown As NumericUpDown
+    Friend WithEvents LineToolStripMenuItem As ToolStripMenuItem
 End Class

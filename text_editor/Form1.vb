@@ -18,6 +18,7 @@ Public Class Form1
     Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
         If SaveFileDialog1.ShowDialog() = DialogResult.OK Then
             My.Computer.FileSystem.WriteAllText(SaveFileDialog1.FileName, RichTextBox1.Text, True)
+
         End If
     End Sub
 

@@ -18,6 +18,7 @@
     Enum ToolEnum
         RegularBrush
         Shape
+        Line
     End Enum
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -32,37 +33,33 @@
 
         SizeUpDown.Visible = False
         SizeUpDown.Value = penSize
-
-        AddHandler canvasContainer.MouseDown, AddressOf Moose.MooseDown
-        AddHandler canvasContainer.MouseUp, AddressOf Moose.MooseUp
     End Sub
 
 
-    Private Sub Foobarbaz(sender As Object, e As MouseEventArgs) Handles canvasContainer.MouseMove
+    Private Sub MooseMove(sender As Object, e As MouseEventArgs) Handles canvasContainer.MouseMove
         Select Case MYLINETOOL
             Case ToolEnum.RegularBrush
-                MooseOnTheMove(sender, e)
+                If Not isMouseDown Then Return
+                mirageGraphics.DrawEllipse(finger, New Rectangle(e.X - penSize \ 2, e.Y - penSize \ 2, penSize, penSize))
+                gContainer.DrawImage(mirage, New Point(0, 0))
         End Select
     End Sub
 
-    Public  Class Moose
-        Public Shared isMouseDown = False
-        Public Shared Sub MooseUp(sender As Object, e As MouseEventArgs)
-            isMouseDown = False
-        End Sub
+    Public isMouseDown = False
+    Public pointDown
+    Public Sub MooseUp(sender As Object, e As MouseEventArgs) Handles canvasContainer.MouseUp
+        isMouseDown = False
+        Select Case MYLINETOOL
+            Case ToolEnum.Line
+                mirageGraphics.DrawLine(finger, pointDown, New Point(e.X, e.Y))
+                'DrawEllipse(finger, New Rectangle(e.X - penSize \ 2, e.Y - penSize \ 2, penSize, penSize))
+                gContainer.DrawImage(mirage, New Point(0, 0))
+        End Select
+    End Sub
 
-        Public Shared Sub MooseDown(sender As Object, e As MouseEventArgs)
-            isMouseDown = True
-        End Sub
-    End Class
-
-    Private Sub MooseOnTheMove(sender As Object, e As MouseEventArgs)
-        If Not Moose.isMouseDown Then Return
-
-        mirageGraphics.DrawEllipse(finger, New Rectangle(e.X - penSize \ 2, e.Y - penSize \ 2, penSize, penSize))
-
-
-        gContainer.DrawImage(mirage, New Point(0, 0))
+    Public Sub MooseDown(sender As Object, e As MouseEventArgs) Handles canvasContainer.MouseDown
+        pointDown = New Point(e.X, e.Y)
+        isMouseDown = True
     End Sub
 
     Dim canMargin = 8
@@ -117,5 +114,9 @@
     Private Sub SizeUpDown_ValueChanged(sender As Object, e As EventArgs) Handles SizeUpDown.ValueChanged
         If finger Is Nothing Then Return
         finger.Width = SizeUpDown.Value
+    End Sub
+
+    Private Sub LineToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LineToolStripMenuItem.Click
+        MYLINETOOL = ToolEnum.Line
     End Sub
 End Class
