@@ -135,9 +135,9 @@ Partial Class Form1
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(241, 360)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(47, 17)
+        Me.Label5.Size = New System.Drawing.Size(94, 17)
         Me.Label5.TabIndex = 12
-        Me.Label5.Text = "delete"
+        Me.Label5.Text = "id for deleting"
         '
         'btnDelete
         '

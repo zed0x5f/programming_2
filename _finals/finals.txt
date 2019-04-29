@@ -1,0 +1,19 @@
+Write a program to compute the first one thousand prime numbers and display these numbers in an object you choose from the visual basic toolbox.
+ 
+
+Write a program that would display information in a DataGrid. Your program should incorporate a database with one table, three columns and five rows. Choose your table to be whatever you’d like. Then, import your database to your project, and bind the data from the database to the DataGrid, then display the information.
+ 
+
+Program an application that allows the user to write his/her name on the first form of the application, pick from a list of items found in a combobox, gives the user the option to choose from a bunch of option buttons, grouped so that the user can at most pick two radiobuttons, allows the user to type in two statements about themselves, then displays all what the user typed, and chose on Form 2 of the application.
+ 
+
+Write a program that allows the user to read from a file and write to a file.
+ 
+
+Program an application that would be used to compute the fortune cookie lucky numbers. Start by allowing the user to enter his/her date of birth in the following format: 26-01-2001, then to calculate the lucky number, use the following formula: 26*01+2001 = 2027 then 2+0+2+7 = 11, also 1+1 = 2, his lucky number would be the number 2. “Your input should be separated by spaces.”
+ 
+
+Write your own class and name it Search that allows the user to search for a specific word in a file of 10 sentences. The file will be opened by your program, and searched. When a match is found, output a messagebox that says: “Word found!”
+ 
+
+Program an application that allows the user to compute the factorial of a number n. “You only need to worry about integers”.

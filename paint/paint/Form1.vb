@@ -37,11 +37,18 @@
 
 
     Private Sub MooseMove(sender As Object, e As MouseEventArgs) Handles canvasContainer.MouseMove
+        'Console.WriteLine(mirage)
+        mirage = mirage.Clone()
+        If Not isMouseDown Then Return
         Select Case MYLINETOOL
             Case ToolEnum.RegularBrush
-                If Not isMouseDown Then Return
                 mirageGraphics.DrawEllipse(finger, New Rectangle(e.X - penSize \ 2, e.Y - penSize \ 2, penSize, penSize))
-                gContainer.DrawImage(mirage, New Point(0, 0))
+                gContainer.DrawImage(mirage.Clone(), New Point(0, 0))
+            Case ToolEnum.Line
+                'Console.WriteLine("wtf is going on")
+                'mirageGraphics.DrawLine(finger, pointDown, New Point(e.X, e.Y))
+                'gContainer.DrawImage(mirage.Clone(), New Point(0, 0))
+                'gContainer.DrawLine(finger, pointDown, New Point(e.X, e.Y))
         End Select
     End Sub
 
@@ -51,9 +58,10 @@
         isMouseDown = False
         Select Case MYLINETOOL
             Case ToolEnum.Line
+
                 mirageGraphics.DrawLine(finger, pointDown, New Point(e.X, e.Y))
                 'DrawEllipse(finger, New Rectangle(e.X - penSize \ 2, e.Y - penSize \ 2, penSize, penSize))
-                gContainer.DrawImage(mirage, New Point(0, 0))
+                gContainer.DrawImage(mirage.Clone(), New Point(0, 0))
         End Select
     End Sub
 
@@ -73,7 +81,7 @@
 
             Dim temp = New Bitmap(canvasContainer.Width, canvasContainer.Height)
             mirageGraphics = Graphics.FromImage(temp)
-            mirageGraphics.DrawImage(mirage, New Point(0, 0))
+            mirageGraphics.DrawImage(mirage.Clone(), New Point(0, 0))
             mirage = temp
 
             gContainer = canvasContainer.CreateGraphics()
